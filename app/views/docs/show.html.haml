@@ -1,2 +1,6 @@
 %h1= @doc.title
 %p= @doc.content
+
+= link_to "Todos os Posts", docs_path 
+= link_to "Editar Post", edit_doc_path(@doc)
+= link_to "Deletar Post", doc_path(@doc), method: :delete, data: { confirm: "Tem certeza que deseja deletar esse arquivo?" }
